@@ -1,7 +1,7 @@
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name              = aws_s3_bucket.bucket.bucket_regional_domain_name
-    origin_id                = "${var.website_path}-origin"
+    origin_id                = "${var.project_name}-origin"
     origin_access_control_id = aws_cloudfront_origin_access_control.default.id
   }
 
@@ -20,7 +20,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "${var.website_host}-origin"
+    target_origin_id = "${var.project_name}-origin"
 
     response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy.id
 
@@ -55,7 +55,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 }
 
 resource "aws_cloudfront_origin_access_control" "default" {
-  name                              = "${var.website_host} cloudfront OAC"
+  name                              = "${var.project_name} cloudfront OAC"
   description                       = "description of OAC"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
@@ -63,7 +63,7 @@ resource "aws_cloudfront_origin_access_control" "default" {
 }
 
 resource "aws_cloudfront_response_headers_policy" "security_headers_policy" {
-  name = "${var.website_host}-security-headers-policy"
+  name = "${var.project_name}-security-headers-policy"
 
   custom_headers_config {
     items {
