@@ -22,9 +22,9 @@ resource "aws_s3_object" "files" {
   for_each = fileset(var.website_path, "**")
   key      = each.key
 
-  source       = "${var.website_path}${each.value}"
+  source       = "${var.website_path}/${each.value}"
   content_type = lookup(tomap(local.mime_types), element(split(".", each.key), length(split(".", each.key)) - 1))
-  etag         = filemd5("${var.website_path}${each.value}")
+  etag         = filemd5("${var.website_path}/${each.value}")
 
 }
 
