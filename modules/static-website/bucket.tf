@@ -49,7 +49,8 @@ data "aws_iam_policy_document" "aws_iam_policy_document" {
     ]
 
     resources = [
-      "arn:aws:s3:::${var.website_host}/*"
+      "arn:aws:s3:::${var.website_host}/*",
+      "arn:aws:s3:::${var.website_host}/icons/*"
     ]
 
     condition {
