@@ -5,8 +5,8 @@ resource "vault_mount" "vault_mount" {
 }
 
 resource "vault_kv_secret_v2" "secret" {
-  mount = vault_mount.vault_mount.path
-  name  = "secret"
+  mount     = vault_mount.vault_mount.path
+  name      = "secret"
   data_json = var.data_json
 }
 
