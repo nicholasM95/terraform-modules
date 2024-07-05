@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/nicholasM95/terraform-modules/compare/v1.1.7...v1.2.0) (2024-07-05)
+
+
+### Features
+
+* static-website ([e6edb68](https://github.com/nicholasM95/terraform-modules/commit/e6edb68c243591ea881584660f5d6e613db4a42e))
+* static-website ([e8cf4aa](https://github.com/nicholasM95/terraform-modules/commit/e8cf4aa4c09914d5feca118aaf42243aeccb57c0))
+* static-website ([38e0a39](https://github.com/nicholasM95/terraform-modules/commit/38e0a39e164f224ba605684c94c4afc6e49756f9))
+
 ## [1.1.7](https://github.com/nicholasM95/terraform-modules/compare/v1.1.6...v1.1.7) (2024-06-18)
 
 ## [1.1.6](https://github.com/nicholasM95/terraform-modules/compare/v1.1.5...v1.1.6) (2024-06-12)
