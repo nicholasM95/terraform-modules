@@ -10,7 +10,7 @@ resource "aws_db_instance" "database" {
   identifier                          = var.database_name
   db_name                             = var.database_name
   engine                              = "postgres"
-  engine_version                      = "14.8"
+  engine_version                      = "14.9"
   instance_class                      = "db.t3.micro"
   username                            = "master"
   password                            = random_password.password.result
