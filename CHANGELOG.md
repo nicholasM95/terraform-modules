@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/nicholasM95/terraform-modules/compare/v1.2.0...v1.3.0) (2024-07-15)
+
+
+### Features
+
+* add module cloud database (postgres) ([70f6ace](https://github.com/nicholasM95/terraform-modules/commit/70f6ace988e4224183c5c0cfe4b9f29ab55e0f76))
+
 # [1.2.0](https://github.com/nicholasM95/terraform-modules/compare/v1.1.7...v1.2.0) (2024-07-05)
 
 
