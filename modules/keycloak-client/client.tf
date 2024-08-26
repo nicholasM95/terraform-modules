@@ -7,6 +7,9 @@ resource "keycloak_openid_client" "openid_client" {
 
   access_type         = "PUBLIC"
   valid_redirect_uris = var.valid_redirect_uris
+  web_origins         = var.valid_redirect_uris
+
+  valid_post_logout_redirect_uris = var.valid_redirect_uris
 
   login_theme           = "keycloak"
   standard_flow_enabled = true
