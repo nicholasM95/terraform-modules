@@ -52,6 +52,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     acm_certificate_arn            = aws_acm_certificate.cert.arn
     ssl_support_method             = "sni-only"
   }
+
+  web_acl_id = "arn:aws:wafv2:us-east-1:896918338968:global/webacl/waf-cloudfront/6fea776f-ac4b-4be3-b959-df5acdfe8e35"
 }
 
 resource "aws_cloudfront_origin_access_control" "default" {
