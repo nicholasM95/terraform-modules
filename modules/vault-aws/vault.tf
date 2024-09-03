@@ -30,13 +30,3 @@ resource "vault_aws_auth_backend_sts_role" "role" {
   account_id = var.aws_account
   sts_role   = var.role_id
 }
-
-resource "vault_aws_auth_backend_role" "my-app-role" {
-  backend            = vault_auth_backend.vault_app_role.path
-  role               = var.vault_path
-  auth_type          = "sts"
-  bound_iam_role_arn = var.role_id
-  policies           = [var.vault_path]
-  ttl                = "1h"
-  max_ttl            = "24h"
-}
