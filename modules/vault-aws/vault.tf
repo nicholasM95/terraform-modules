@@ -27,12 +27,6 @@ resource "vault_auth_backend" "vault_app_role" {
 
 resource "vault_aws_auth_backend_sts_role" "role" {
   backend    = vault_auth_backend.vault_app_role.path
-  account_id = "1234567890"
-  sts_role   = "arn:aws:iam::1234567890:role/my-role"
-}
-
-resource "vault_approle_auth_backend_role" "vault_approle_auth_backend_role" {
-  backend        = vault_auth_backend.vault_app_role.path
-  role_name      = "${var.vault_path}-role"
-  role_id        = var.role_id
+  account_id = var.aws_account
+  sts_role   = var.role_id
 }
