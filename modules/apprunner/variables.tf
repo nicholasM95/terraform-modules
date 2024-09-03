@@ -10,15 +10,15 @@ variable "image_identifier" {
 
 variable "web_acl" {
   description = "WEB ACL"
-  type = string
+  type        = string
 }
 
 variable "host_name" {
   description = "Host name (example.com)"
-  type = string
+  type        = string
 }
 
 variable "domain_name" {
   description = "Domain name (api.example.com)"
-  type = string
+  type        = string
 }

@@ -7,7 +7,7 @@ resource "aws_apprunner_service" "apprunner_service" {
         port = "8080"
 
         runtime_environment_variables = {
-          "SPRING_PROFILES_ACTIVE"   = "aws"
+          "SPRING_PROFILES_ACTIVE" = "aws"
         }
       }
       image_identifier      = var.image_identifier

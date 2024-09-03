@@ -3,9 +3,14 @@ variable "role_id" {
   type        = string
 }
 
+variable "role_name" {
+  description = "Vault role name"
+  type        = string
+}
+
 variable "aws_account" {
   description = "AWS account"
-  type = string
+  type        = string
 }
 
 variable "vault_path" {
