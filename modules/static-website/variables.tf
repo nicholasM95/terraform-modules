@@ -34,3 +34,8 @@ variable "content_security_policy" {
   description = "Content Security Policy header"
   default     = "frame-ancestors 'none'; default-src 'none'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-src 'self'; worker-src 'self' blob:"
 }
+
+variable "web_acl_id" {
+  type        = string
+  description = "WEB ACL ID"
+}
