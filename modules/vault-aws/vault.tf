@@ -20,13 +20,19 @@ path "${var.vault_path}/*" {
 EOT
 }
 
-resource "vault_auth_backend" "vault_app_role" {
+resource "vault_auth_backend" "auth_aws_backend" {
   type = "aws"
   path = var.vault_path
 }
 
-resource "vault_aws_auth_backend_sts_role" "role" {
-  backend    = vault_auth_backend.vault_app_role.path
+resource "vault_aws_auth_backend_sts_role" "sts_role" {
+  backend    = vault_auth_backend.auth_aws_backend.path
   account_id = var.aws_account
   sts_role   = var.role_id
+}
+
+resource "vault_aws_auth_backend_role" "backend_role" {
+  backend = vault_auth_backend.auth_aws_backend.path
+  role = var.role_id
+  token_policies = [vault_policy.policy.name]
 }
