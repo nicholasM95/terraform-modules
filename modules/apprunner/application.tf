@@ -19,6 +19,11 @@ resource "aws_apprunner_service" "apprunner_service" {
     }
     auto_deployments_enabled = true
   }
+
+  instance_configuration {
+    instance_role_arn = aws_iam_role.vault_apprunner_iam_role.arn
+  }
+
 }
 
 resource "aws_apprunner_custom_domain_association" "apprunner_custom_domain" {
