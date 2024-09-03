@@ -32,7 +32,7 @@ resource "vault_aws_auth_backend_sts_role" "sts_role" {
 }
 
 resource "vault_aws_auth_backend_role" "backend_role" {
-  backend = vault_auth_backend.auth_aws_backend.path
-  role = var.role_id
+  backend        = vault_auth_backend.auth_aws_backend.path
+  role           = var.role_id
   token_policies = [vault_policy.policy.name]
 }
