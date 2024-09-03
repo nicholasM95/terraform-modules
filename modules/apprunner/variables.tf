@@ -22,3 +22,8 @@ variable "domain_name" {
   description = "Domain name (api.example.com)"
   type        = string
 }
+
+variable "vault_uri" {
+  description = "Vault URI"
+  type        = string
+}

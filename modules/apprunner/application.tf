@@ -8,6 +8,7 @@ resource "aws_apprunner_service" "apprunner_service" {
 
         runtime_environment_variables = {
           "SPRING_PROFILES_ACTIVE" = "aws"
+          "VAULT_URI"              = var.vault_uri
         }
       }
       image_identifier      = var.image_identifier
