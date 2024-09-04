@@ -25,14 +25,9 @@ resource "vault_auth_backend" "auth_aws_backend" {
   path = var.vault_path
 }
 
-resource "vault_aws_auth_backend_sts_role" "sts_role" {
-  backend    = vault_auth_backend.auth_aws_backend.path
-  account_id = var.aws_account
-  sts_role   = var.role_id
-}
-
-resource "vault_aws_auth_backend_role" "backend_role" {
-  backend        = vault_auth_backend.auth_aws_backend.path
-  role           = var.role_id
-  token_policies = [vault_policy.policy.name]
+resource "vault_aws_auth_backend_role" "auth_aws_backend_role" {
+  backend                  = vault_auth_backend.auth_aws_backend.path
+  role                     = var.vault_path
+  bound_iam_principal_arns = [var.role_id]
+  token_policies           = [vault_policy.policy.name]
 }
