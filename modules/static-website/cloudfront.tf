@@ -22,7 +22,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "${var.project_name}-origin"
 
-    function_association = {
+    function_association {
       count = var.enable_basic_auth ? 1 : 0
       event_type = "viewer-request"
       function_arn = aws_cloudfront_function.basic_auth_function[0].arn
