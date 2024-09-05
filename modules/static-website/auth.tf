@@ -17,13 +17,7 @@ function handler(event) {
 
     return {
         statusCode: 401,
-        statusDescription: 'Unauthorized',
-        headers: {
-            'www-authenticate': [{
-                key: 'WWW-Authenticate',
-                value: 'Basic realm="Secure Area"'
-            }]
-        }
+        statusDescription: 'Unauthorized'
     };
 }
 EOF
