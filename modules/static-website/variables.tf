@@ -39,3 +39,21 @@ variable "web_acl_id" {
   type        = string
   description = "WEB ACL ID"
 }
+
+variable "enable_basic_auth" {
+  type        = bool
+  description = "Boolean to enable or disable Basic Authentication"
+  default     = false
+}
+
+variable "basic_auth_username" {
+  type        = string
+  description = "Username for Basic Authentication"
+  default     = ""
+}
+
+variable "basic_auth_password" {
+  type        = string
+  description = "Password for Basic Authentication"
+  default     = ""
+}
