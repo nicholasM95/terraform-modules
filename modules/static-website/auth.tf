@@ -1,4 +1,5 @@
 resource "aws_cloudfront_function" "basic_auth_function" {
+  count   = var.enable_basic_auth ? 1 : 0
   name    = "BasicAuthFunction"
   runtime = "cloudfront-js-1.0"
 
