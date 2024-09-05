@@ -46,14 +46,8 @@ variable "enable_basic_auth" {
   default     = false
 }
 
-variable "basic_auth_username" {
+variable "basic_auth_username_password" {
   type        = string
-  description = "Username for Basic Authentication"
-  default     = ""
-}
-
-variable "basic_auth_password" {
-  type        = string
-  description = "Password for Basic Authentication"
+  description = "Username Password for Basic Authentication (username:password) | base64"
   default     = ""
 }
