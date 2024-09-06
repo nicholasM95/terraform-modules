@@ -11,6 +11,12 @@ resource "vault_kv_secret_v2" "secret" {
   data_json = jsonencode(
     {}
   )
+
+  lifecycle {
+    ignore_changes = [
+      data_json
+    ]
+  }
 }
 
 resource "vault_policy" "policy" {
