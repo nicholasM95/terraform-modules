@@ -25,7 +25,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     dynamic "function_association" {
       for_each = var.enable_basic_auth ? [1] : []
       content {
-        event_type = "viewer-request"
+        event_type   = "viewer-request"
         function_arn = aws_cloudfront_function.basic_auth_function[0].arn
       }
     }
