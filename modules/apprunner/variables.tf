@@ -27,3 +27,27 @@ variable "vault_uri" {
   description = "Vault URI"
   type        = string
 }
+
+variable "aws_account" {
+  description = "aws account id"
+  type        = string
+  default     = ""
+}
+
+variable "database_resource_id" {
+  description = "database resource id"
+  type        = string
+  default     = ""
+}
+
+variable "database_user" {
+  description = "database user"
+  type        = string
+  default     = ""
+}
+
+variable "policy_type" {
+  description = "Specify which policy you want to use: 'empty', 'vault', 'rds', or 'vault_rds'."
+  type        = string
+  default     = "empty"
+}

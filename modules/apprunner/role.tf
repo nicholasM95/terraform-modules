@@ -29,25 +29,24 @@ resource "aws_iam_role_policy_attachment" "policy_attachment" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSAppRunnerServicePolicyForECRAccess"
 }
 
-resource "aws_iam_policy" "vault_auth_policy" {
-  name        = "${var.application_name}-vault-apprunner-policy"
-  description = "Policy for App Runner to authenticate with Vault"
+resource "aws_iam_policy" "dynamic_apprunner_policy" {
+  name        = "${var.application_name}-dynamic-apprunner-policy"
+  description = "Dynamic policy"
 
-  policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
-      {
-        Effect = "Allow",
-        Action = [
-          "sts:AssumeRoleWithWebIdentity"
-        ],
-        Resource = "*"
-      }
-    ]
-  })
+  policy = lookup(
+    {
+      "vault"     = data.aws_iam_policy_document.vault_auth_policy_document.json,
+      "rds"       = data.aws_iam_policy_document.rds_connect_policy_document.json,
+      "vault_rds" = data.aws_iam_policy_document.vault_rds_connect_policy_document.json
+      "empty"     = data.aws_iam_policy_document.empty_policy_document.json
+    },
+    var.policy_type,
+    data.aws_iam_policy_document.vault_auth_policy_document.json
+  )
 }
+
 
 resource "aws_iam_role_policy_attachment" "apprunner_policy_attachment" {
   role       = aws_iam_role.vault_apprunner_iam_role.name
-  policy_arn = aws_iam_policy.vault_auth_policy.arn
+  policy_arn = aws_iam_policy.dynamic_apprunner_policy.arn
 }
