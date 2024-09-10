@@ -60,3 +60,27 @@ variable "aws_role" {
   type        = string
   default     = ""
 }
+
+variable "db_url" {
+  description = "DB url"
+  type        = string
+  default     = ""
+}
+
+variable "db_username" {
+  description = "DB username"
+  type        = string
+  default     = ""
+}
+
+variable "db_password" {
+  description = "DB password"
+  type        = string
+  default     = ""
+}
+
+variable "db_database" {
+  description = "DB database"
+  type        = string
+  default     = ""
+}
