@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/nicholasM95/terraform-modules/compare/v1.3.4...v1.4.0) (2024-09-10)
+
+
+### Features
+
+* add keycloak client ([9a4dbb9](https://github.com/nicholasM95/terraform-modules/commit/9a4dbb9512ce7a39a7dcfeee13bd42ffb30110ea))
+* add keycloak realm ([88c5647](https://github.com/nicholasM95/terraform-modules/commit/88c5647edaff9a3b2511fe5d264ce9ea922f445d))
+* add web acl for cloudfront ([1a21e23](https://github.com/nicholasM95/terraform-modules/commit/1a21e230bc7625dd6873b32b66f6a5cb057518ac))
+* authentication option ([8f02f8a](https://github.com/nicholasM95/terraform-modules/commit/8f02f8a75d602f8a1a73594e0711bb0041a50853))
+* aws apprunner ([09e393c](https://github.com/nicholasM95/terraform-modules/commit/09e393cfa16c1f97f17b3ae7912888d85e45abff))
+* aws container registry ([65db360](https://github.com/nicholasM95/terraform-modules/commit/65db360634f5717c2baa1c5dd3d680fd7deaf798))
+* vault aws ([da991d6](https://github.com/nicholasM95/terraform-modules/commit/da991d67c839760f96bb5b71af5464641b5a45d0))
+
 ## [1.3.4](https://github.com/nicholasM95/terraform-modules/compare/v1.3.3...v1.3.4) (2024-08-23)
 
 ## [1.3.3](https://github.com/nicholasM95/terraform-modules/compare/v1.3.2...v1.3.3) (2024-07-30)
