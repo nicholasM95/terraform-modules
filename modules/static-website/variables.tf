@@ -34,3 +34,20 @@ variable "content_security_policy" {
   description = "Content Security Policy header"
   default     = "frame-ancestors 'none'; default-src 'none'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-src 'self'; worker-src 'self' blob:"
 }
+
+variable "web_acl_id" {
+  type        = string
+  description = "WEB ACL ID"
+}
+
+variable "enable_basic_auth" {
+  type        = bool
+  description = "Boolean to enable or disable Basic Authentication"
+  default     = false
+}
+
+variable "basic_auth_username_password" {
+  type        = string
+  description = "Username Password for Basic Authentication (username:password) | base64"
+  default     = ""
+}

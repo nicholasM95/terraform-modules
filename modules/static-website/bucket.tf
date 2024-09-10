@@ -10,6 +10,8 @@ locals {
     "svg"         = "image/svg+xml"
     "txt"         = "text/plain"
     "webmanifest" = "application/json"
+    "xml"         = "application/xml"
+    "gz"          = "application/gzip"
   }
 }
 

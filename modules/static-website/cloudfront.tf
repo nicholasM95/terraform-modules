@@ -22,6 +22,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "${var.project_name}-origin"
 
+    dynamic "function_association" {
+      for_each = var.enable_basic_auth ? [1] : []
+      content {
+        event_type   = "viewer-request"
+        function_arn = aws_cloudfront_function.basic_auth_function[0].arn
+      }
+    }
+
     response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy.id
 
 
@@ -52,6 +60,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     acm_certificate_arn            = aws_acm_certificate.cert.arn
     ssl_support_method             = "sni-only"
   }
+
+  web_acl_id = var.web_acl_id
 }
 
 resource "aws_cloudfront_origin_access_control" "default" {
