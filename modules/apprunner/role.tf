@@ -19,8 +19,8 @@ resource "aws_iam_role" "apprunner_iam_role" {
   assume_role_policy = data.aws_iam_policy_document.apprunner_iam_policy_document.json
 }
 
-resource "aws_iam_role" "vault_apprunner_iam_role" {
-  name               = "${var.application_name}-vault-apprunner-role"
+resource "aws_iam_role" "instance_apprunner_iam_role" {
+  name               = "${var.application_name}-instance-apprunner-role"
   assume_role_policy = data.aws_iam_policy_document.apprunner_iam_policy_document.json
 }
 
@@ -47,6 +47,6 @@ resource "aws_iam_policy" "dynamic_apprunner_policy" {
 
 
 resource "aws_iam_role_policy_attachment" "apprunner_policy_attachment" {
-  role       = aws_iam_role.vault_apprunner_iam_role.name
+  role       = aws_iam_role.instance_apprunner_iam_role.name
   policy_arn = aws_iam_policy.dynamic_apprunner_policy.arn
 }

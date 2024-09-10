@@ -22,7 +22,7 @@ resource "aws_apprunner_service" "apprunner_service" {
   }
 
   instance_configuration {
-    instance_role_arn = aws_iam_role.vault_apprunner_iam_role.arn
+    instance_role_arn = aws_iam_role.instance_apprunner_iam_role.arn
   }
 
 }
