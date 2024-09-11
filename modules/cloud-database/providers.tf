@@ -2,12 +2,12 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.65.0"
+      version = "5.66.0"
     }
 
     postgresql = {
       source  = "cyrilgdn/postgresql"
-      version = "1.22.0"
+      version = "1.23.0"
     }
   }
 }

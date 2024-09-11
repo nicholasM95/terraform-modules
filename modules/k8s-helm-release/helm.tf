@@ -47,4 +47,24 @@ resource "helm_release" "helm_release" {
     name  = "aws.role"
     value = var.aws_role
   }
+
+  set {
+    name  = "db.url"
+    value = var.db_url
+  }
+
+  set {
+    name  = "db.username"
+    value = var.db_username
+  }
+
+  set {
+    name  = "db.password"
+    value = var.db_password
+  }
+
+  set {
+    name  = "db.database"
+    value = var.db_database
+  }
 }
