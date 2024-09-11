@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/nicholasM95/terraform-modules/compare/v1.4.0...v1.5.0) (2024-09-11)
+
+
+### Features
+
+* add db properties ([1aaba61](https://github.com/nicholasM95/terraform-modules/commit/1aaba61baa0c7634a9b5c1ea9bceb10b23d8b52b))
+
 # [1.4.0](https://github.com/nicholasM95/terraform-modules/compare/v1.3.4...v1.4.0) (2024-09-10)
 
 
