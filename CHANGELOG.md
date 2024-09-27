@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/nicholasM95/terraform-modules/compare/v1.5.3...v1.6.0) (2024-09-27)
+
+
+### Features
+
+* add output bucket arn for static hosting bucket ([5f2d063](https://github.com/nicholasM95/terraform-modules/commit/5f2d063ac582c81b5bba5fc984365462e558e113))
+
 ## [1.5.3](https://github.com/nicholasM95/terraform-modules/compare/v1.5.2...v1.5.3) (2024-09-20)
 
 ## [1.5.2](https://github.com/nicholasM95/terraform-modules/compare/v1.5.1...v1.5.2) (2024-09-19)
