@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/nicholasM95/terraform-modules/compare/v1.6.0...v1.7.0) (2024-10-02)
+
+
+### Features
+
+* add vault-k8s module ([cc6d80a](https://github.com/nicholasM95/terraform-modules/commit/cc6d80a328ca9662ce48c54a160fe9ccbf2d8e56))
+
 # [1.6.0](https://github.com/nicholasM95/terraform-modules/compare/v1.5.3...v1.6.0) (2024-09-27)
 
 
