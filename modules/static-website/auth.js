@@ -1,7 +1,7 @@
 function handler(event) {
-    const uri = request.uri;
     var request = event.request;
     var headers = request.headers;
+    var uri = request.uri;
 
     var authHeader = headers['authorization'];
     var encodedCredentials = '${var.basic_auth_username_password}';
