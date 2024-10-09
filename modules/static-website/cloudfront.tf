@@ -30,6 +30,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       }
     }
 
+    dynamic "function_association" {
+      for_each = var.enable_rewrite ? [1] : []
+      content {
+        event_type   = "viewer-request"
+        function_arn = aws_cloudfront_function.rewrite_function[0].arn
+      }
+    }
+
     response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy.id
 
 
