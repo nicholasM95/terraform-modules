@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/nicholasM95/terraform-modules/compare/v1.7.1...v1.8.0) (2024-10-09)
+
+
+### Features
+
+* add option to enable and disable rewrite ([b6ecb08](https://github.com/nicholasM95/terraform-modules/commit/b6ecb0876f0279591f37f10a3ca70b527146cc29))
+
 ## [1.7.1](https://github.com/nicholasM95/terraform-modules/compare/v1.7.0...v1.7.1) (2024-10-06)
 
 # [1.7.0](https://github.com/nicholasM95/terraform-modules/compare/v1.6.0...v1.7.0) (2024-10-02)
