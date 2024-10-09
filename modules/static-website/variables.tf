@@ -46,6 +46,12 @@ variable "enable_basic_auth" {
   default     = false
 }
 
+variable "enable_rewrite" {
+  type        = bool
+  description = "Boolean to enable or disable rewrite"
+  default     = false
+}
+
 variable "basic_auth_username_password" {
   type        = string
   description = "Username Password for Basic Authentication (username:password) | base64"
