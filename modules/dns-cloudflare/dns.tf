@@ -3,7 +3,7 @@ data "cloudflare_zones" "zone" {
 }
 
 resource "cloudflare_dns_record" "dns_record" {
-  zone_id = lookup(data.cloudflare_zones.zone.zones[0], "id")
+  zone_id = data.cloudflare_zones.zone.result[0].id
   name    = var.name
   content = var.ip
   type    = var.type
