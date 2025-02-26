@@ -1,10 +1,10 @@
 data "cloudflare_zones" "zone" {
-  filter {
+  account {
     name = var.domain_name
   }
 }
 
-resource "cloudflare_record" "dns_record" {
+resource "cloudflare_dns_record" "dns_record" {
   zone_id = lookup(data.cloudflare_zones.zone.zones[0], "id")
   name    = var.sub_domain_name
   value   = aws_cloudfront_distribution.s3_distribution.domain_name
@@ -13,7 +13,7 @@ resource "cloudflare_record" "dns_record" {
   proxied = true
 }
 
-resource "cloudflare_record" "dns_record_validation" {
+resource "cloudflare_dns_record" "dns_record_validation" {
   for_each = {
     for dvo in aws_acm_certificate.cert.domain_validation_options : dvo.domain_name => {
       name   = dvo.resource_record_name
