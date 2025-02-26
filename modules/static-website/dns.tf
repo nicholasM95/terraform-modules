@@ -1,11 +1,9 @@
-data "cloudflare_zone" "zone" {
-  filter = {
-    name = var.domain_name
-  }
+data "cloudflare_zones" "zone" {
+  name = var.domain_name
 }
 
 resource "cloudflare_dns_record" "dns_record" {
-  zone_id = data.cloudflare_zone.zone.id
+  zone_id = lookup(data.cloudflare_zones.zone.zones[0], "id")
   name    = var.sub_domain_name
   content = aws_cloudfront_distribution.s3_distribution.domain_name
   type    = "CNAME"
@@ -22,7 +20,7 @@ resource "cloudflare_dns_record" "dns_record_validation" {
     }
   }
 
-  zone_id = data.cloudflare_zone.zone.id
+  zone_id = lookup(data.cloudflare_zones.zone.zones[0], "id")
   name    = each.value.name
   content = each.value.record
   type    = each.value.type

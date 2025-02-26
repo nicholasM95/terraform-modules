@@ -1,11 +1,9 @@
-data "cloudflare_zone" "zone" {
-  filter = {
-    name = var.host_name
-  }
+data "cloudflare_zones" "zone" {
+  name = var.host_name
 }
 
 resource "cloudflare_dns_record" "dns_record" {
-  zone_id = data.cloudflare_zone.zone.id
+  zone_id = lookup(data.cloudflare_zones.zone.zones[0], "id")
   name    = var.name
   content = var.ip
   type    = var.type
