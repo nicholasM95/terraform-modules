@@ -7,7 +7,7 @@ data "cloudflare_zone" "zone" {
 resource "cloudflare_dns_record" "dns_record" {
   zone_id = data.cloudflare_zone.zone.id
   name    = var.sub_domain_name
-  value   = aws_cloudfront_distribution.s3_distribution.domain_name
+  content = aws_cloudfront_distribution.s3_distribution.domain_name
   type    = "CNAME"
   ttl     = 1
   proxied = true
@@ -24,7 +24,7 @@ resource "cloudflare_dns_record" "dns_record_validation" {
 
   zone_id = data.cloudflare_zone.zone.id
   name    = each.value.name
-  value   = each.value.record
+  content = each.value.record
   type    = each.value.type
   ttl     = 1
   proxied = false

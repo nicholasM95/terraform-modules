@@ -7,7 +7,7 @@ data "cloudflare_zone" "zone" {
 resource "cloudflare_dns_record" "dns_record" {
   zone_id = data.cloudflare_zone.zone.id
   name    = var.name
-  value   = var.ip
+  content = var.ip
   type    = var.type
   ttl     = var.ttl
   proxied = var.proxied
