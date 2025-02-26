@@ -1,5 +1,5 @@
 data "cloudflare_zones" "zone" {
-  account {
+  account = {
     name = var.domain_name
   }
 }
