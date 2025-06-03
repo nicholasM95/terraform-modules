@@ -22,13 +22,12 @@ resource "aws_s3_bucket" "bucket" {
 resource "aws_s3_object" "files" {
   bucket = aws_s3_bucket.bucket.bucket
 
-  for_each = fileset(var.website_path, "**")
-  key      = each.key
+  for_each = var.website_path != "" ? fileset(var.website_path, "**") : {}
 
+  key          = each.key
   source       = "${var.website_path}/${each.value}"
   content_type = lookup(tomap(local.mime_types), element(split(".", each.key), length(split(".", each.key)) - 1))
   etag         = filemd5("${var.website_path}/${each.value}")
-
 }
 
 resource "aws_s3_bucket_policy" "aws_s3_bucket_policy" {
@@ -52,7 +51,8 @@ data "aws_iam_policy_document" "aws_iam_policy_document" {
 
     resources = [
       "arn:aws:s3:::${var.website_host}/*",
-      "arn:aws:s3:::${var.website_host}/icons/*"
+      "arn:aws:s3:::${var.website_host}/icons/*",
+      "arn:aws:s3:::${var.website_host}/assets/*"
     ]
 
     condition {

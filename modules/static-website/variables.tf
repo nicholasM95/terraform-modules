@@ -16,6 +16,7 @@ variable "website_host" {
 variable "website_path" {
   type        = string
   description = "Website path (files to upload)"
+  default     = ""
 }
 
 variable "project_name" {
