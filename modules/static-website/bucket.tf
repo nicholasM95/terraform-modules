@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "bucket" {
 resource "aws_s3_object" "files" {
   bucket = aws_s3_bucket.bucket.bucket
 
-  for_each = var.website_path != "" ? fileset(var.website_path, "**") : {}
+  for_each = var.website_path != "" ? fileset(var.website_path, "**") : toset([])
 
   key          = each.key
   source       = "${var.website_path}/${each.value}"
