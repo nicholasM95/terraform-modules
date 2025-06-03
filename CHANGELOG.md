@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/nicholasM95/terraform-modules/compare/v1.8.20...v1.9.0) (2025-06-03)
+
+
+### Features
+
+* make upload website optional ([394d159](https://github.com/nicholasM95/terraform-modules/commit/394d159d5a08bb67d56a43cca7ff49b3cfda84ea))
+
 ## [1.8.20](https://github.com/nicholasM95/terraform-modules/compare/v1.8.19...v1.8.20) (2025-05-25)
 
 ## [1.8.19](https://github.com/nicholasM95/terraform-modules/compare/v1.8.18...v1.8.19) (2025-05-08)
