@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/nicholasM95/terraform-modules/compare/v1.9.1...v1.10.0) (2025-06-08)
+
+
+### Features
+
+* remove dns config static-website ([735b6b6](https://github.com/nicholasM95/terraform-modules/commit/735b6b67a9e813871dcfa588deff686ef8e3e0ab))
+
 ## [1.9.1](https://github.com/nicholasM95/terraform-modules/compare/v1.9.0...v1.9.1) (2025-06-03)
 
 # [1.9.0](https://github.com/nicholasM95/terraform-modules/compare/v1.8.20...v1.9.0) (2025-06-03)
