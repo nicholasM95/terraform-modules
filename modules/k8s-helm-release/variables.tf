@@ -25,12 +25,6 @@ variable "docker_config" {
   default     = ""
 }
 
-variable "vault_uri" {
-  description = "Vault uri"
-  type        = string
-  default     = ""
-}
-
 variable "vault_role_id" {
   description = "Vault role id"
   type        = string
