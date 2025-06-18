@@ -3,12 +3,6 @@ resource "vault_auth_backend" "auth_k8s_backend" {
   path = var.vault_path
 }
 
-resource "vault_kubernetes_auth_backend_config" "auth_kubernetes_backend_config" {
-  backend            = vault_auth_backend.auth_k8s_backend.path
-  kubernetes_host    = var.kubernetes_internal_host
-  kubernetes_ca_cert = base64decode(var.kubernetes_ca_cert)
-}
-
 resource "vault_kubernetes_auth_backend_role" "auth_kubernetes_backend_role" {
   backend                          = vault_auth_backend.auth_k8s_backend.path
   role_name                        = var.vault_path
