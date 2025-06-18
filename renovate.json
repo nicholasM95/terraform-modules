@@ -3,10 +3,10 @@
   "extends": [
     "config:recommended"
   ],
-  "assignees": [
-    "nicholasM95"
-  ],
+  "assignees": [],
   "baseBranches": [
-    "develop"
-  ]
+    "main"
+  ],
+  "automerge": true,
+  "automergeType": "branch"
 }

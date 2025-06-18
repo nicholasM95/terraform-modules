@@ -5,7 +5,10 @@ on:
   push:
     branches:
       - main
-      - develop
+
+concurrency:
+  group: release-main
+  cancel-in-progress: false
 
 jobs:
   release:
@@ -51,11 +54,3 @@ jobs:
           git add CHANGELOG.md
           git commit -m "docs(CHANGELOG): Update CHANGELOG.md"
           git push origin main
-
-      - name: Update develop branch
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git fetch origin
-          git checkout develop
-          git merge --ff-only origin/main
-          git push origin develop
