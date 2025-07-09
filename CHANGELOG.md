@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/nicholasM95/terraform-modules/compare/v1.10.11...v1.11.0) (2025-07-09)
+
+
+### Features
+
+* use cloudfront Managed-CachingDisabled ([ba4d0df](https://github.com/nicholasM95/terraform-modules/commit/ba4d0df0bd4311a9fa7818e6036f02a12220ba66))
+
 ## [1.10.11](https://github.com/nicholasM95/terraform-modules/compare/v1.10.10...v1.10.11) (2025-07-03)
 
 ## [1.10.10](https://github.com/nicholasM95/terraform-modules/compare/v1.10.9...v1.10.10) (2025-07-01)
