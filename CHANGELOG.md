@@ -1,3 +1,5 @@
+## [1.11.3](https://github.com/nicholasM95/terraform-modules/compare/v1.11.2...v1.11.3) (2025-07-15)
+
 ## [1.11.2](https://github.com/nicholasM95/terraform-modules/compare/v1.11.1...v1.11.2) (2025-07-11)
 
 ## [1.11.1](https://github.com/nicholasM95/terraform-modules/compare/v1.11.0...v1.11.1) (2025-07-10)
