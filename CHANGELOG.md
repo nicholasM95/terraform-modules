@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/nicholasM95/terraform-modules/compare/v1.11.6...v1.12.0) (2025-07-15)
+
+
+### Features
+
+* set default auth flow to passwordless ([7656312](https://github.com/nicholasM95/terraform-modules/commit/7656312fb41a7be600f5d88b232fd611af0d5039))
+
 ## [1.11.6](https://github.com/nicholasM95/terraform-modules/compare/v1.11.5...v1.11.6) (2025-07-15)
 
 ## [1.11.5](https://github.com/nicholasM95/terraform-modules/compare/v1.11.4...v1.11.5) (2025-07-15)
