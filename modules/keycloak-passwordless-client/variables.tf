@@ -21,5 +21,5 @@ variable "valid_redirect_uris" {
 variable "passwordless_browser_id" {
   description = "Passwordless browser id"
   type        = string
-  default     = ""
+  default     = "b82dd6c9-3d48-4c1d-9d6f-9ea570a33863"
 }
