@@ -2,8 +2,6 @@ resource "keycloak_realm" "realm" {
   realm        = var.realm_name
   enabled      = true
   display_name = var.realm_name
-
-  browser_flow = keycloak_authentication_flow.passwordless_browser.alias
 }
 
 resource "keycloak_authentication_flow" "passwordless_browser" {
