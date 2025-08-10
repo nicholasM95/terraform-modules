@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.4.0
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
