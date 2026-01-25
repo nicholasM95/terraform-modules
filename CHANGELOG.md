@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/nicholasM95/terraform-modules/compare/v1.12.75...v1.13.0) (2026-01-25)
+
+
+### Features
+
+* keycloak realm for passwordless authentication ([90b0e2c](https://github.com/nicholasM95/terraform-modules/commit/90b0e2c72751bb26a8745d583c1ae737e8812a07))
+
 ## [1.12.75](https://github.com/nicholasM95/terraform-modules/compare/v1.12.74...v1.12.75) (2026-01-22)
 
 ## [1.12.74](https://github.com/nicholasM95/terraform-modules/compare/v1.12.73...v1.12.74) (2026-01-21)
