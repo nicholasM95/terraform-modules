@@ -12,3 +12,9 @@ variable "client_name" {
   type        = string
   description = "client name"
 }
+
+variable "service_accounts_enabled" {
+  type        = bool
+  description = "enable service account"
+  default     = false
+}

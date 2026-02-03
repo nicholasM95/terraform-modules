@@ -5,5 +5,7 @@ resource "keycloak_openid_client" "openid_client" {
   name    = var.client_name
   enabled = true
 
-  access_type         = "CONFIDENTIAL"
+  access_type              = "CONFIDENTIAL"
+  service_accounts_enabled = var.service_accounts_enabled
+
 }
