@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/nicholasM95/terraform-modules/compare/v1.13.2...v1.14.0) (2026-02-03)
+
+
+### Features
+
+* add keycloak client resource server ([d6262a8](https://github.com/nicholasM95/terraform-modules/commit/d6262a822dacfc68b3bffaca2dcc2415bd1ac070))
+
 ## [1.13.2](https://github.com/nicholasM95/terraform-modules/compare/v1.13.1...v1.13.2) (2026-01-29)
 
 ## [1.13.1](https://github.com/nicholasM95/terraform-modules/compare/v1.13.0...v1.13.1) (2026-01-25)
