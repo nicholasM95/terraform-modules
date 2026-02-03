@@ -17,3 +17,9 @@ variable "valid_redirect_uris" {
   description = "List of valid redirect URIs"
   type        = list(string)
 }
+
+variable "audiences" {
+  description = "List of client audiences to include in the access token"
+  type        = list(string)
+  default     = []
+}
