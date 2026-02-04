@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/nicholasM95/terraform-modules/compare/v1.14.3...v1.15.0) (2026-02-04)
+
+
+### Features
+
+* keycloak realm dcr ([63e166c](https://github.com/nicholasM95/terraform-modules/commit/63e166cf6265a806f2bb780b788b8f5b1361d375))
+
 ## [1.14.3](https://github.com/nicholasM95/terraform-modules/compare/v1.14.2...v1.14.3) (2026-02-03)
 
 ## [1.14.2](https://github.com/nicholasM95/terraform-modules/compare/v1.14.1...v1.14.2) (2026-02-03)
