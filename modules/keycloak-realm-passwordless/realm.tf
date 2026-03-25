@@ -27,6 +27,12 @@ resource "keycloak_openid_client_scope" "openid" {
   description = "OpenID"
 }
 
+resource "keycloak_openid_client_scope" "service_account" {
+  realm_id    = keycloak_realm.realm.id
+  name        = "service_account"
+  description = "Service Account"
+}
+
 resource "keycloak_realm_optional_client_scopes" "optional_scopes" {
   realm_id = keycloak_realm.realm.id
 
@@ -36,6 +42,7 @@ resource "keycloak_realm_optional_client_scopes" "optional_scopes" {
     "offline_access",
     "microprofile-jwt",
     "organization",
-    keycloak_openid_client_scope.openid.name
+    keycloak_openid_client_scope.openid.name,
+    keycloak_openid_client_scope.service_account.name,
   ]
 }
