@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/nicholasM95/terraform-modules/compare/v1.15.19...v1.16.0) (2026-04-04)
+
+
+### Features
+
+* add audience protocol mapper for keycloak client ([0cd24c3](https://github.com/nicholasM95/terraform-modules/commit/0cd24c3a3f88a9c0686410e3a2190afd3f43df38))
+
 ## [1.15.19](https://github.com/nicholasM95/terraform-modules/compare/v1.15.18...v1.15.19) (2026-04-02)
 
 ## [1.15.18](https://github.com/nicholasM95/terraform-modules/compare/v1.15.17...v1.15.18) (2026-04-02)
