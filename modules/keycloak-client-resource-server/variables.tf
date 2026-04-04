@@ -24,3 +24,9 @@ variable "standard_token_exchange_enabled" {
   description = "enable token exchange"
   default     = false
 }
+
+variable "audiences" {
+  description = "List of client audiences to include in the access token"
+  type        = list(string)
+  default     = []
+}
