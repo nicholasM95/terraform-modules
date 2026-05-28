@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/nicholasM95/terraform-modules/compare/v1.17.0...v1.18.0) (2026-05-28)
+
+
+### Features
+
+* add support for broker read-token role in keycloak client ([3d85766](https://github.com/nicholasM95/terraform-modules/commit/3d8576681acaa8d9a594cf054de1ccaffce4efb3))
+
 # [1.17.0](https://github.com/nicholasM95/terraform-modules/compare/v1.16.11...v1.17.0) (2026-05-28)
 
 
