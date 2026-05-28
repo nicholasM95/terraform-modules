@@ -30,3 +30,8 @@ variable "audiences" {
   type        = list(string)
   default     = []
 }
+
+variable "enable_broker_read_token" {
+  type    = bool
+  default = false
+}
