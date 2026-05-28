@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/nicholasM95/terraform-modules/compare/v1.16.11...v1.17.0) (2026-05-28)
+
+
+### Features
+
+* add GitHub identity provider to keycloak realm ([d80bee5](https://github.com/nicholasM95/terraform-modules/commit/d80bee5e14f251baf04a8d5b678dba521346b4da))
+
 ## [1.16.11](https://github.com/nicholasM95/terraform-modules/compare/v1.16.10...v1.16.11) (2026-05-28)
 
 ## [1.16.10](https://github.com/nicholasM95/terraform-modules/compare/v1.16.9...v1.16.10) (2026-05-22)
