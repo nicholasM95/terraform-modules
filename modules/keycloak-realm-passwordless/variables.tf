@@ -12,3 +12,21 @@ variable "realm_registration_allowed" {
   type        = bool
   description = "enable registration"
 }
+
+variable "enable_github" {
+  type        = bool
+  description = "enable GitHub identity provider"
+  default     = false
+}
+
+variable "github_client_id" {
+  type        = string
+  description = "GitHub client id"
+  default     = ""
+}
+
+variable "github_client_secret" {
+  type        = string
+  description = "GitHub client secret"
+  default     = ""
+}
