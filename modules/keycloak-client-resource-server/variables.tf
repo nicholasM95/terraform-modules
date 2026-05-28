@@ -35,3 +35,8 @@ variable "enable_broker_read_token" {
   type    = bool
   default = false
 }
+
+variable "enable_manage_users" {
+  type    = bool
+  default = false
+}
