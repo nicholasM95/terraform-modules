@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/nicholasM95/terraform-modules/compare/v1.18.0...v1.19.0) (2026-05-28)
+
+
+### Features
+
+* add support for manage-users role in Keycloak client configuration ([4b4ffb7](https://github.com/nicholasM95/terraform-modules/commit/4b4ffb760639e8d826d7de8437c7ed6fa860079d))
+
 # [1.18.0](https://github.com/nicholasM95/terraform-modules/compare/v1.17.0...v1.18.0) (2026-05-28)
 
 
