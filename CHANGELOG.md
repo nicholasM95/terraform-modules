@@ -1,3 +1,5 @@
+## [1.19.1](https://github.com/nicholasM95/terraform-modules/compare/v1.19.0...v1.19.1) (2026-06-02)
+
 # [1.19.0](https://github.com/nicholasM95/terraform-modules/compare/v1.18.0...v1.19.0) (2026-05-28)
 
 
