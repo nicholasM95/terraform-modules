@@ -30,3 +30,9 @@ variable "github_client_secret" {
   description = "GitHub client secret"
   default     = ""
 }
+
+variable "realm_admin_permissions_enabled" {
+  type        = bool
+  description = "Enables the use of fine grained permissions v2"
+  default     = false
+}

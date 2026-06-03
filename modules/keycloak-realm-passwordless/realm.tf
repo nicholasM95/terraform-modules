@@ -6,6 +6,7 @@ resource "keycloak_realm" "realm" {
   duplicate_emails_allowed       = false
   registration_email_as_username = true
   display_name                   = var.realm_display_name
+  admin_permissions_enabled      = var.realm_admin_permissions_enabled
 }
 
 resource "keycloak_authentication_flow" "passwordless_browser" {
