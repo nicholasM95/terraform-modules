@@ -40,3 +40,8 @@ variable "enable_manage_users" {
   type    = bool
   default = false
 }
+
+variable "enable_manage_clients" {
+  type    = bool
+  default = false
+}

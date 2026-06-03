@@ -1,9 +1,3 @@
-data "keycloak_openid_client" "realm_management" {
-  count     = var.enable_manage_users ? 1 : 0
-  realm_id  = var.realm_id
-  client_id = "realm-management"
-}
-
 data "keycloak_role" "manage_users" {
   count     = var.enable_manage_users ? 1 : 0
   realm_id  = var.realm_id
