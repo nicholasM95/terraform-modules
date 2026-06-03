@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/nicholasM95/terraform-modules/compare/v1.21.0...v1.22.0) (2026-06-03)
+
+
+### Features
+
+* add support for mcp-impersonator role in Keycloak realm ([c252464](https://github.com/nicholasM95/terraform-modules/commit/c25246440efd441484eb59e0faddf5149d222ad5))
+
 # [1.21.0](https://github.com/nicholasM95/terraform-modules/compare/v1.20.0...v1.21.0) (2026-06-03)
 
 
