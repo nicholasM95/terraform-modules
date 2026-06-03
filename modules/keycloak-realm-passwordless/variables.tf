@@ -36,9 +36,3 @@ variable "realm_admin_permissions_enabled" {
   description = "Enables the use of fine grained permissions v2"
   default     = false
 }
-
-variable "realm_enable_mcp_impersonator_role" {
-  type        = bool
-  description = "create the mcp-impersonator realm role used for FGAP impersonation"
-  default     = false
-}

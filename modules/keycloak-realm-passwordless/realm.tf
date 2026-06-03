@@ -41,9 +41,3 @@ resource "keycloak_realm_optional_client_scopes" "optional_scopes" {
     keycloak_openid_client_scope.openid.name
   ]
 }
-
-resource "keycloak_role" "mcp_impersonator" {
-  count    = var.realm_enable_mcp_impersonator_role ? 1 : 0
-  realm_id = keycloak_realm.realm.id
-  name     = "mcp-impersonator"
-}
