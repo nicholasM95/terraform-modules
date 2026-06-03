@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/nicholasM95/terraform-modules/compare/v1.20.0...v1.21.0) (2026-06-03)
+
+
+### Features
+
+* add support for enabling admin permissions in Keycloak realm ([0358b55](https://github.com/nicholasM95/terraform-modules/commit/0358b559c46bfbbc7e9ff297976fdba579215998))
+
 # [1.20.0](https://github.com/nicholasM95/terraform-modules/compare/v1.19.1...v1.20.0) (2026-06-03)
 
 
