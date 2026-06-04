@@ -25,6 +25,13 @@ variable "standard_token_exchange_enabled" {
   default     = false
 }
 
+variable "oauth2_device_flow_enabled" {
+  type        = bool
+  description = "enable device flow"
+  default     = false
+}
+
+
 variable "audiences" {
   description = "List of client audiences to include in the access token"
   type        = list(string)

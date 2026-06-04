@@ -2,13 +2,15 @@ resource "keycloak_openid_client" "openid_client" {
   realm_id  = var.realm_id
   client_id = var.client_id
 
-  name    = var.client_name
-  enabled = true
+  name        = var.client_name
+  description = "Client for ${var.client_name} - resource server"
+  enabled     = true
 
   access_type                     = "CONFIDENTIAL"
   service_accounts_enabled        = var.service_accounts_enabled
   standard_token_exchange_enabled = var.standard_token_exchange_enabled
 
+  oauth2_device_authorization_grant_enabled = var.oauth2_device_flow_enabled
 }
 
 resource "keycloak_openid_audience_protocol_mapper" "audience_mapper" {
