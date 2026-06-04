@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/nicholasM95/terraform-modules/compare/v1.23.2...v1.24.0) (2026-06-04)
+
+
+### Features
+
+* add support for enabling OAuth2 device flow in Keycloak client configuration ([20e0ca7](https://github.com/nicholasM95/terraform-modules/commit/20e0ca7a161bdb1da2db0679ce8606451a81b51b))
+
 ## [1.23.2](https://github.com/nicholasM95/terraform-modules/compare/v1.23.1...v1.23.2) (2026-06-04)
 
 ## [1.23.1](https://github.com/nicholasM95/terraform-modules/compare/v1.23.0...v1.23.1) (2026-06-04)
