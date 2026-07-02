@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/nicholasM95/terraform-modules/compare/v1.24.13...v1.25.0) (2026-07-02)
+
+
+### Features
+
+* add support for mp4 MIME type in static website bucket configuration ([46a7ee9](https://github.com/nicholasM95/terraform-modules/commit/46a7ee946a0653a4f8dc55cf373374ebcce3e880))
+
 ## [1.24.13](https://github.com/nicholasM95/terraform-modules/compare/v1.24.12...v1.24.13) (2026-07-02)
 
 ## [1.24.12](https://github.com/nicholasM95/terraform-modules/compare/v1.24.11...v1.24.12) (2026-06-26)
