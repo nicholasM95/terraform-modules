@@ -14,6 +14,7 @@ locals {
     "webmanifest" = "application/json"
     "xml"         = "application/xml"
     "gz"          = "application/gzip"
+    "mp4"         = "video/mp4"
   }
 }
 
