@@ -1,3 +1,5 @@
+## [1.25.18](https://github.com/nicholasM95/terraform-modules/compare/v1.25.17...v1.25.18) (2026-08-27)
+
 ## [1.25.17](https://github.com/nicholasM95/terraform-modules/compare/v1.25.16...v1.25.17) (2026-08-25)
 
 ## [1.25.16](https://github.com/nicholasM95/terraform-modules/compare/v1.25.15...v1.25.16) (2026-08-20)
