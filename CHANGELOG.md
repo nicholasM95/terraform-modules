@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/nicholasM95/terraform-modules/compare/v1.25.32...v1.26.0) (2026-10-04)
+
+
+### Features
+
+* add support for custom cache policies and response headers in CloudFront distribution ([79e5385](https://github.com/nicholasM95/terraform-modules/commit/79e53850bab0c19c2599bee32b37f263feba5d30))
+
 ## [1.25.32](https://github.com/nicholasM95/terraform-modules/compare/v1.25.31...v1.25.32) (2026-10-01)
 
 ## [1.25.31](https://github.com/nicholasM95/terraform-modules/compare/v1.25.30...v1.25.31) (2026-09-26)
