@@ -58,3 +58,21 @@ variable "basic_auth_username_password" {
   description = "Username Password for Basic Authentication (username:password) | base64"
   default     = ""
 }
+
+variable "assets_path_patterns" {
+  type        = list(string)
+  description = "Path patterns for hashed/immutable assets that get a long Cache-Control"
+  default     = ["/assets/*"]
+}
+
+variable "assets_cache_control" {
+  type        = string
+  description = "Cache-Control header for assets matching assets_path_patterns"
+  default     = "public, max-age=31536000, immutable"
+}
+
+variable "default_cache_control" {
+  type        = string
+  description = "Cache-Control header for all other responses (index.html, SPA routes)"
+  default     = "no-cache"
+}

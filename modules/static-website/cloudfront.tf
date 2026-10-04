@@ -2,6 +2,23 @@ data "aws_cloudfront_cache_policy" "caching_disabled" {
   name = "Managed-CachingDisabled"
 }
 
+data "aws_cloudfront_cache_policy" "caching_optimized" {
+  name = "Managed-CachingOptimized"
+}
+
+locals {
+  response_headers_policies = {
+    default = {
+      name          = "${var.project_name}-security-headers-policy"
+      cache_control = var.default_cache_control
+    }
+    assets = {
+      name          = "${var.project_name}-assets-headers-policy"
+      cache_control = var.assets_cache_control
+    }
+  }
+}
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name              = aws_s3_bucket.bucket.bucket_regional_domain_name
@@ -43,9 +60,33 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       }
     }
 
-    response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy.id
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy["default"].id
 
     viewer_protocol_policy = "redirect-to-https"
+  }
+
+  dynamic "ordered_cache_behavior" {
+    for_each = var.assets_path_patterns
+    content {
+      path_pattern     = ordered_cache_behavior.value
+      cache_policy_id  = data.aws_cloudfront_cache_policy.caching_optimized.id
+      allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+      cached_methods   = ["GET", "HEAD"]
+      target_origin_id = "${var.project_name}-origin"
+      compress         = true
+
+      dynamic "function_association" {
+        for_each = var.enable_basic_auth ? [1] : []
+        content {
+          event_type   = "viewer-request"
+          function_arn = aws_cloudfront_function.basic_auth_function[0].arn
+        }
+      }
+
+      response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy["assets"].id
+
+      viewer_protocol_policy = "redirect-to-https"
+    }
   }
 
 
@@ -72,13 +113,25 @@ resource "aws_cloudfront_origin_access_control" "default" {
   signing_protocol                  = "sigv4"
 }
 
+moved {
+  from = aws_cloudfront_response_headers_policy.security_headers_policy
+  to   = aws_cloudfront_response_headers_policy.security_headers_policy["default"]
+}
+
 resource "aws_cloudfront_response_headers_policy" "security_headers_policy" {
-  name = "${var.project_name}-security-headers-policy"
+  for_each = local.response_headers_policies
+  name     = each.value.name
 
   custom_headers_config {
     items {
       header   = "permissions-policy"
       value    = var.permission_policy
+      override = true
+    }
+
+    items {
+      header   = "cache-control"
+      value    = each.value.cache_control
       override = true
     }
   }
